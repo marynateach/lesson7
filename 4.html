@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure {
+            width: 80%;
+            height: 80vh;
+            margin: 0;
+            overflow: hidden;
+            min-width: 600px;
+        }
+
+        #photo {
+            width: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img id="photo" src="">
+    </figure>
+    <br>
+    <br>
+    <button id="change">Change Photo</button>
+
+    <script>
+        function changeImg() {
+            //0.4858595959 * 9 = 4.32
+            let random = Math.ceil(Math.random() * 9);
+            document.getElementById('photo').src = 'images/' + random + '.jpg';
+        }
+
+        document.getElementById('change').addEventListener('click', changeImg);
+    </script>
+</body>
+</html>

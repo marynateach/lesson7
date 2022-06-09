@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo doloremque, atque quam perferendis odio tempore eveniet? Eligendi nihil temporibus voluptatem incidunt molestiae libero dolore voluptates? Velit autem rem eius nihil!
+    </p>
+    <button id="submit">Change Color</button>
+
+    <script>
+        let btn = document.getElementById('submit');
+        let txtStyle = document.getElementById('text').style;
+
+        btn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            if(txtStyle.getPropertyValue("color") === "red") {
+                txtStyle.setProperty("color", "#000");
+            }
+            else {
+                txtStyle.setProperty("color", "red");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- form action target -->
+
+    
+    <button id="link">Link into</button>
+    <form id="formOpen" action="" target="_blank">
+        <button id="open">Move to link</button>
+    </form>
+
+    <script>
+        let makeLink = document.getElementById('link');
+        let openLink = document.getElementById('open');
+        let formOpen = document.getElementById('formOpen');
+        let link;
+
+        makeLink.addEventListener('click', takeLink);
+        openLink.addEventListener('click', openNewPage);
+
+        function takeLink() {
+            link = prompt("Введите вашу ссылку: ", "");
+        }
+
+        function openNewPage() {
+            formOpen.action = link;
+        }
+    </script>
+</body>
+</html>
